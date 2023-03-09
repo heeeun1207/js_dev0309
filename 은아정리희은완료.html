@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+  
+  const root = document.getElementById('root');
+  //요소를 문자열으로 변환
+  function eleMaker(tagName, props, ...children) {
+  // 태그 만들고
+  const element = document.createElement(tagName);
+  // 여기가 문젠데 객체
+  Object.keys(props).forEach(function (key) {
+  element[key] = props[key];
+  console.dir(element);
+  
+  });
+  //배열 전달 후 텍스트로
+  if (children.length > 0) {
+    children.forEach(function (child) {
+      if (typeof (child) === "string") {
+        child = document.createTextNode(child);
+      }
+      element.append(child);
+    });
+  }
+  return element;
+}
+
+const obj = {
+display: "flex",
+align: "center",
+c: 3,
+}
+let div = eleMaker("div", obj, ["희은수연지민가나다라마바사"]);
+root.append(div);
+
+  </script>
+</body>
+</html>
