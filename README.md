@@ -6,6 +6,10 @@
 4. 왼쪽 고양이 이슈확인하고 체크하기 
 5. 받은 폴더에서 내파일들을 생성하고 커밋푸쉬 
 6. 내이름/이슈이름 <- 푸쉬 오리진 해주기 
+7. 
+예시 ) git push origin  heeeun1207/issue4* 
+
+
 git branch -r  : 작업현황보기 
 git pull  : 작업 당겨오기 
-예시 ) git push origin  heeeun1207/issue4* 
+
